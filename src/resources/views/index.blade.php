@@ -27,12 +27,12 @@
 			<td>{{ $navbar->name }}</td>
 			<td>{{ $navbar->slug }}</td>
 			<td class="text-center">
-				<a href="{{ route($baseroute . 'edit', ['id' => $navbar->id]) }}" :title="trans('crudnavbar::navbar.edit')">
+				<a href="{{ route($baseroute . 'edit', ['id' => $navbar->id]) }}" title="{{ trans('crudnavbar::navbar.edit') }}">
 					<x-bi::pencil-square />
 				</a>
 			</td>
 			<td class="text-center">
-				<a href="{{ route($baseroute . 'delete', ['id' => $navbar->id]) }}" onclick="return confirm('{{ trans('crudnavbar::navbar.delete.confirm') }}')" :title="trans('crudnavbar::navbar.delete')">
+				<a href="{{ route($baseroute . 'delete', ['id' => $navbar->id]) }}" onclick="return confirm('{{ trans('crudnavbar::navbar.delete.confirm') }}')" title="{{ trans('crudnavbar::navbar.delete') }}">
 					<x-bi::trash color="red" />
 				</a>
 			</td>
