@@ -17,7 +17,7 @@
 		<td>{{ trans('crudnavbar::navbar.order') }}</td>
 		<td>{{ trans('crudnavbar::navbar.name') }}</td>
 		<td>{{ trans('crudnavbar::navbar.slug') }}</td>
-		<td class="text-center" colspan="2">Handlinger</td>
+		<td class="text-center" colspan="2">{{ trans('crudnavbar::navbar.actions') }}</td>
 	</thead>
 	@foreach ($navbars as $navbar)
 		<tr>

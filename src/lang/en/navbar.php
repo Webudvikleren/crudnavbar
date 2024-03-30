@@ -16,6 +16,7 @@ return [
 	'order' => 'Order',
 	'parent' => 'Parent navbar item',
 	'no-parent' => 'No parent navbar item',
+	'slug' => 'Slug',
 	'update' => 'Update navbar item',
 	'updated' => 'Navbar updated.',
 ];

@@ -32,14 +32,19 @@ Route::controller(CrudNavbarController::class)->middleware('can:navbar crud')->n
 });
 ```
 
-The navbar items and their diffferent lo
+The navbar items and their diffferent locations can be added in your `app\Providers\AppServiceProvider.php`in the boot-method as shown below. This ensures that the variables are accessible to all your views. 
 
 ```
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\View;
+use Webudvikleren\CrudNavbar\Models\CrudNavbar;
+
 View::composer('*', function($view)
 {
 	$navbar = Cache::remember('navbar', Carbon::now()->addHours(8), function () {
 		$arr = [];
-		$navbars = Navbar::where('location', 'navbar')->where('parent', null)->orderBy('order', 'asc')->get();
+		$navbars = CrudNavbar::where('location', 'navbar')->where('parent', null)->orderBy('order', 'asc')->get();
 
 		foreach ($navbars as $navbar)
 		{
@@ -51,7 +56,7 @@ View::composer('*', function($view)
 
 	$navbarFooter = Cache::remember('navbarFooter', Carbon::now()->addHours(8), function () {
 		$arr = [];
-		$navbars = Navbar::where('location', 'navbarFooter')->where('parent', null)->orderBy('order', 'asc')->get();
+		$navbars = CrudNavbar::where('location', 'navbarFooter')->where('parent', null)->orderBy('order', 'asc')->get();
 
 		foreach ($navbars as $navbar)
 		{

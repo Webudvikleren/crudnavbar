@@ -1,24 +1,26 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace Webudvikleren\CrudNavbar\Controllers;
 
 use App\Http\Controllers\Controller;
-use Webudvikleren\CrudNavbar\Models\CrudNavbar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Webudvikleren\CrudNavbar\Models\CrudNavbar;
 
-class NavbarController extends Controller
+class CrudNavbarController extends Controller
 {
-	protected string $baseroute = 'admin.crudimages.';
+	protected string $baseroute = 'admin.crudnavbar.';
 	protected array $breadcrumbs = [];
 
     public function create()
 	{
+		$navbars = CrudNavbar::orderBy('parent')->orderBy('order')->get();
 		$this->breadcrumbs[] = [trans('crudnavbar::navbar.navbars'), route($this->baseroute . 'index')];
 		$navbars = CrudNavbar::orderBy('parent')->orderBy('order')->get();
 		return view('crudnavbar::create')
 				->with('baseroute', $this->baseroute)
-				->with('breadcrumbs', $this->breadcrumbs);
+				->with('breadcrumbs', $this->breadcrumbs)
+				->with('navbars', $navbars);
 	}
 
 	public function delete($id)

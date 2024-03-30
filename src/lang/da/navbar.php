@@ -16,6 +16,7 @@ return [
 	'order' => 'Rækkefølge',
 	'parent' => 'Hovedmenu',
 	'no-parent' => 'Ingen hovedmenu',
+	'slug' => 'Slug',
 	'update' => 'Opdater menupunkt',
 	'updated' => 'Menupunkt opdateret.',
 ];
