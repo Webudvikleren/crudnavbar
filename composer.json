@@ -1,0 +1,35 @@
+{
+    "name": "webudvikleren/crudnavbar",
+    "description": "Used to upload public images for a Laravel application.",
+    "autoload": {
+        "psr-4": {
+            "Webudvikleren\\CrudNavbar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Philip Sørensen",
+            "email": "git@philipsoerensen.com",
+			"homepage": "https://philipsoerensen.com"
+        }
+    ],
+	"license": "MIT",
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "https://github.com/philipsorensen/formcomponents"
+		}
+	],
+    "minimum-stability": "stable",
+    "require": {
+		"philipsorensen/bootstrapicons": "^1.1",
+        "philipsorensen/formcomponents": "^1.0"
+    },
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Webudvikleren\\CrudNavbar\\Providers\\CrudNavbarProvider"
+			]
+		}
+	}
+}
