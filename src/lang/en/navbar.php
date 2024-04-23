@@ -4,6 +4,7 @@ return [
 	'actions' => 'Actions',
 	'add' => 'Add navbar item',
 	'create' => 'Create navbar item',
+	'created' => 'Navbar item created',
 	'delete' => 'Delete navbar item',
 	'delete.confirm' => 'Are you sure you want to delete the navbar item?',
 	'deleted' => 'Navbar item deleted.',

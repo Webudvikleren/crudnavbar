@@ -4,6 +4,7 @@ return [
 	'actions' => 'Handlinger',
 	'add' => 'Tilføj menupunkt',
 	'create' => 'Opret menupunkt',
+	'created' => 'Menupunkt oprettet',
 	'delete' => 'Slet menupunkt',
 	'delete.confirm' => 'Er du sikker på, du vil slette menupunktet?',
 	'deleted' => 'Menupunkt slettet.',
