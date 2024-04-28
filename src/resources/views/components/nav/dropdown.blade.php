@@ -9,7 +9,7 @@
 	</a>
 	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 		@foreach ($children as $child)
-			<x-nav.dropdown-item :name="$child['name']" :url="config('url') . '/' . $child['slug']" />
+			<x-crudnavbar::nav.dropdown-item :name="$child['name']" :url="config('url') . '/' . $child['slug']" />
 		@endforeach 
 	</ul>
 </li>
