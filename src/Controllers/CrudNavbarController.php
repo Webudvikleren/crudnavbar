@@ -58,7 +58,7 @@ class CrudNavbarController extends Controller
 	{
 		$validated = $request->validate([
 			'location' => ['required', 'string'],
-			'parent' => ['exists:navbar,id', 'integer', 'nullable'],
+			'parent' => ['exists:crud_navbar,id', 'integer', 'nullable'],
 			'order' => ['integer', 'required'],
 			'name' => ['required', 'string'],
 			'slug' => ['nullable', 'string'],
@@ -85,7 +85,7 @@ class CrudNavbarController extends Controller
 
 		$validated = $request->validate([
 			'location' => ['required', 'string'],
-			'parent' => ['exists:navbar,id', 'integer', 'nullable'],
+			'parent' => ['exists:crud_navbar,id', 'integer', 'nullable'],
 			'order' => ['integer', 'required'],
 			'name' => ['required', 'string'],
 			'slug' => ['nullable', 'string'],
